@@ -1,4 +1,7 @@
-API_key.txt
-db_pass.txt
-db_user.txt
+# API key for api-ninjas.com (geocoding)
+db/API_key.txt
+
+db/db_pass.txt
+db/db_user.txt
+
 node_modules
