@@ -3,5 +3,6 @@ db/API_key.txt
 
 db/db_pass.txt
 db/db_user.txt
+db/db_name.txt
 
 node_modules

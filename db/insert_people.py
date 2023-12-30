@@ -1,12 +1,15 @@
 import mysql.connector
 
+db_user = open("db/db_user.txt").read()
+db_pass = open("db/db_pass.txt").read()
+db_name = open("db/db_name.txt").read()
 
 db = mysql.connector.connect(
     host="localhost",
-    port=3307,
-    user="root",
-    password="",
-    database="barkbutlers"
+    port=3306,
+    user=db_user,
+    password=db_pass,
+    database=db_name
 )
 
 cursor = db.cursor()
@@ -16,7 +19,6 @@ query = ""
 with open(sql_file, "r") as file:
     for line in file:
         if line == "\n":
-            print(query)
             cursor.execute(query)
             query = ""
             continue
