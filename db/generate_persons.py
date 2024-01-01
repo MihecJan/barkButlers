@@ -30,7 +30,7 @@ for ind, row in cities_df.iterrows():
         location = "point(" + str(latitude + latitude_offset) + "," +  str(longitude + longitude_offset) + ")"
 
         query = "INSERT INTO person(full_name, username, location)\n" +\
-            "VALUES ('{full_name}', '{username}', {location})\n\n"\
+            "VALUES ('{full_name}', '{username}', {location});\n\n"\
             .format(full_name=full_name, username=username, location=location)
 
         with open(output_file, "a") as file:
